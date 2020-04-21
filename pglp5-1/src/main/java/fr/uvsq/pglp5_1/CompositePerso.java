@@ -9,7 +9,7 @@ import java.util.Iterator;
 public class CompositePerso {
 
 	
-
+	private static final long serialVersionUID = 963852077410L;
 	private ArrayList<InterfacePerso> personnels;
 	private final int id;
 	private static int cpt  = 0 ;
@@ -27,7 +27,7 @@ public class CompositePerso {
 			ip.print();
 		}
 	}
-	public final int getId() {
+	public final int getid() {
 		return id;
 	}
 	 

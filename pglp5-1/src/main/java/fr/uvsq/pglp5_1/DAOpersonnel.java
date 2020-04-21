@@ -4,6 +4,7 @@ package fr.uvsq.pglp5_1;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
+import java.io.IOException;
 
 public class DAOpersonnel implements DAOapp<Personnel>, Serializable {
 	
@@ -34,10 +35,20 @@ public class DAOpersonnel implements DAOapp<Personnel>, Serializable {
 	        list.add(object);
 	    }
 	   
-	   public void update(final Personnel object,final Map<String, Object> params) {
-		   
-	   }
+	   public Personnel update(final Personnel New) 
+	   {
+	        Personnel old  = this.get (New.getid() );
+	        if (old  != null) {
+	            this.remove(old);
+	            
+	                this.add(New);
+	             
+	            return New;
+	        }
+	        return null;
+	    }
 	   
+	 
 	   public void remove(final Personnel object) {
 	        list.remove(object);
 	    }

@@ -7,6 +7,6 @@ public interface DAOapp<D> {
 	
 	D get(int id);
 	void add(D object);
-	void update(D object, Map<String, Object> params);
+	abstract D update(D object);
 	void remove(D object);
 }
