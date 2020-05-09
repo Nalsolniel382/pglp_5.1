@@ -16,6 +16,11 @@ public class DAOCompositePerso implements DAOapp<CompositePerso>, Serializable {
 	        list = new ArrayList<CompositePerso>();
 	    }
 	  
+	  public void serialize(final CompositePerso c, final String f) {
+	       
+	    }
+	 
+	 
 	  //get 
 	  
 	  public CompositePerso get(final int id) {

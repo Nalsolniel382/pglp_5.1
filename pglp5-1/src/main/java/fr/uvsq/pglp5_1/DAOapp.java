@@ -9,4 +9,6 @@ public interface DAOapp<D> {
 	void add(D object);
 	abstract D update(D object);
 	void remove(D object);
+	abstract void serialize(D object, String f);
+	  public abstract D deserialize(String f);
 }
